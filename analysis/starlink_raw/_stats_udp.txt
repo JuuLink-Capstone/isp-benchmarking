@@ -1,0 +1,85 @@
+======================================================================
+UDP PERFORMANCE ANALYSIS RESULTS
+======================================================================
+
+UDP 100M Statistics:
+--------------------------------------------------
+  Total Samples:     62,816
+  Mean Bitrate:      100.00 Mbps
+  Median Bitrate:    100.00 Mbps
+  Std Deviation:     0.01 Mbps
+  Min Bitrate:       99.70 Mbps
+  Max Bitrate:       100.00 Mbps
+  5th Percentile:    100.00 Mbps
+  25th Percentile:   100.00 Mbps
+  75th Percentile:   100.00 Mbps
+  95th Percentile:   100.00 Mbps
+  99th Percentile:   100.00 Mbps
+
+  Packet Loss Statistics:
+  Mean Loss:         0.1276%
+  Median Loss:       0.1200%
+  Min Loss:          0.0330%
+  Max Loss:          0.2700%
+
+UDP 300M Statistics:
+--------------------------------------------------
+  Total Samples:     62,816
+  Mean Bitrate:      300.00 Mbps
+  Median Bitrate:    300.00 Mbps
+  Std Deviation:     0.06 Mbps
+  Min Bitrate:       297.00 Mbps
+  Max Bitrate:       300.00 Mbps
+  5th Percentile:    300.00 Mbps
+  25th Percentile:   300.00 Mbps
+  75th Percentile:   300.00 Mbps
+  95th Percentile:   300.00 Mbps
+  99th Percentile:   300.00 Mbps
+
+  Packet Loss Statistics:
+  Mean Loss:         0.2605%
+  Median Loss:       0.2300%
+  Min Loss:          0.1200%
+  Max Loss:          0.9000%
+
+UDP 600M Statistics:
+--------------------------------------------------
+  Total Samples:     62,816
+  Mean Bitrate:      599.99 Mbps
+  Median Bitrate:    600.00 Mbps
+  Std Deviation:     0.20 Mbps
+  Min Bitrate:       589.00 Mbps
+  Max Bitrate:       602.00 Mbps
+  5th Percentile:    600.00 Mbps
+  25th Percentile:   600.00 Mbps
+  75th Percentile:   600.00 Mbps
+  95th Percentile:   600.00 Mbps
+  99th Percentile:   600.00 Mbps
+
+  Packet Loss Statistics:
+  Mean Loss:         0.5272%
+  Median Loss:       0.5000%
+  Min Loss:          0.2600%
+  Max Loss:          1.8000%
+
+UDP 900M Statistics:
+--------------------------------------------------
+  Total Samples:     62,624
+  Mean Bitrate:      899.97 Mbps
+  Median Bitrate:    900.00 Mbps
+  Std Deviation:     0.77 Mbps
+  Min Bitrate:       874.00 Mbps
+  Max Bitrate:       923.00 Mbps
+  5th Percentile:    900.00 Mbps
+  25th Percentile:   900.00 Mbps
+  75th Percentile:   900.00 Mbps
+  95th Percentile:   900.00 Mbps
+  99th Percentile:   900.00 Mbps
+
+  Packet Loss Statistics:
+  Mean Loss:         0.8129%
+  Median Loss:       0.7300%
+  Min Loss:          0.4500%
+  Max Loss:          2.8000%
+
+======================================================================

@@ -1,0 +1,62 @@
+======================================================================
+TCP PERFORMANCE ANALYSIS RESULTS
+======================================================================
+
+TCP C2S (Upload) Statistics:
+--------------------------------------------------
+  Total Samples:     44,739
+  Mean Bitrate:      837.33 Mbps
+  Median Bitrate:    934.00 Mbps
+  Std Deviation:     169.51 Mbps
+  Min Bitrate:       336.00 Mbps
+  Max Bitrate:       954.00 Mbps
+  5th Percentile:    450.00 Mbps
+  25th Percentile:   775.00 Mbps
+  75th Percentile:   944.00 Mbps
+  95th Percentile:   947.00 Mbps
+  99th Percentile:   949.00 Mbps
+  Total Retries:     1,088,408
+
+TCP S2C (Download) Statistics:
+--------------------------------------------------
+  Total Samples:     62,400
+  Mean Bitrate:      440.51 Mbps
+  Median Bitrate:    434.00 Mbps
+  Std Deviation:     173.37 Mbps
+  Min Bitrate:       35.70 Mbps
+  Max Bitrate:       938.00 Mbps
+  5th Percentile:    136.00 Mbps
+  25th Percentile:   330.00 Mbps
+  75th Percentile:   557.00 Mbps
+  95th Percentile:   741.00 Mbps
+  99th Percentile:   877.00 Mbps
+
+TCP BIDIR TX (Upload) Statistics:
+--------------------------------------------------
+  Total Samples:     43,744
+  Mean Bitrate:      836.06 Mbps
+  Median Bitrate:    933.00 Mbps
+  Std Deviation:     167.94 Mbps
+  Min Bitrate:       334.00 Mbps
+  Max Bitrate:       952.00 Mbps
+  5th Percentile:    445.00 Mbps
+  25th Percentile:   777.00 Mbps
+  75th Percentile:   941.00 Mbps
+  95th Percentile:   947.00 Mbps
+  99th Percentile:   949.00 Mbps
+
+TCP BIDIR RX (Download) Statistics:
+--------------------------------------------------
+  Total Samples:     43,744
+  Mean Bitrate:      499.15 Mbps
+  Median Bitrate:    483.00 Mbps
+  Std Deviation:     139.29 Mbps
+  Min Bitrate:       83.90 Mbps
+  Max Bitrate:       937.00 Mbps
+  5th Percentile:    304.00 Mbps
+  25th Percentile:   392.00 Mbps
+  75th Percentile:   589.00 Mbps
+  95th Percentile:   761.00 Mbps
+  99th Percentile:   896.00 Mbps
+
+======================================================================

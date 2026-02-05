@@ -1,0 +1,22 @@
+========================================
+Run start: 2026-01-21T23:49:47-07:00
+Server: 165.227.20.120
+Bind IP: 192.168.1.251
+Interface: enp1s0
+----------------------------------------
+ethtool pre-run
+NIC statistics:
+     tx_packets: 2886462
+     rx_packets: 6797936
+     tx_errors: 0
+     rx_errors: 0
+     rx_missed: 0
+     align_errors: 0
+     tx_single_collisions: 0
+     tx_multi_collisions: 0
+     unicast: 4943932
+     broadcast: 1561879
+     multicast: 292125
+     tx_aborted: 0
+     tx_underrun: 0
+========================================
