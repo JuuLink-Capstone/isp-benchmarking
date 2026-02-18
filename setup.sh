@@ -36,7 +36,12 @@ source .venv/bin/activate
 echo "Installing Python dependencies..."
 pip install -r requirements.txt
 
+# Copy configuration template
+echo "Copying configuration template..."
+cp config.template.yaml config.yaml
+
 echo ""
 echo "=== Setup complete! ==="
 echo "To activate the virtual environment in the future, run:"
 echo "  source .venv/bin/activate"
+echo "Ensure proper configuration by editing the config.yaml file."
