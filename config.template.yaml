@@ -1,0 +1,35 @@
+# Network Test Configuration
+
+# Server and Network Settings
+server: "165.227.20.120"      # IP of DigitalOcean iperf3 server
+bind_ip: "10.32.123.61"       # Insert your own IP addr. here 
+interface: "wlp2s0"           # Name of interface providing IP addr.
+
+# Test Duration Settings
+duration: 300                 # seconds per test
+omit: 30                      # TCP slow-start omit time (seconds)
+iter_start: 1                 # Starting iteration number
+
+# Directory Settings
+log_dir: "./benchmarks/NAME"  # Insert a folder name here
+log_files:
+  metadata: "metadata.log"    # Don't change
+  tcp: "tcp.log"              # ..
+  udp: "udp.log"              # ..
+  fping: "fping.log"          # ..
+
+# UDP Rate Ladder (bandwidth limits)
+udp_rates:
+  - "100M"
+  - "300M"
+  - "600M"
+  - "900M"
+
+# fping Parameters
+fping:
+  interval_ms: 100    # inter-packet gap
+  period_ms: 100      # per-host period
+
+# Retry Settings
+retries: 3            # number of retry attempts per test
+sleep_between: 5      # seconds between tests/retries
