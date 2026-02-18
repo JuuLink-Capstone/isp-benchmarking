@@ -100,7 +100,7 @@ class NetworkTester:
         with open(self.log_files['metadata'], 'a') as f:
             f.write("=" * 40 + "\n")
             f.write(f"Run start: {timestamp}\n")
-            f.write(f"Server: {self.config['server']}\n")
+            f.write(f"Server: {self.config['server']}:{self.config.get('port', 5201)}\n")
             f.write(f"Bind IP: {self.config['bind_ip']}\n")
             f.write(f"Interface: {self.config['interface']}\n")
             f.write("-" * 40 + "\n")
@@ -142,6 +142,7 @@ class NetworkTester:
             cmd = [
                 'iperf3',
                 '-c', self.config['server'],
+                '-p', str(self.config.get('port', 5201)),
                 '-t', str(self.config['duration']),
                 '--omit', str(self.config['omit']),
                 '-B', self.config['bind_ip']
@@ -185,6 +186,7 @@ class NetworkTester:
             cmd = [
                 'iperf3',
                 '-c', self.config['server'],
+                '-p', str(self.config.get('port', 5201)),
                 '-t', str(self.config['duration']),
                 '-u',
                 '-b', rate,

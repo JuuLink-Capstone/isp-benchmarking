@@ -2,6 +2,7 @@
 
 # Server and Network Settings
 server: "165.227.20.120"      # IP of DigitalOcean iperf3 server
+port: 5201                    # iperf3 server port (default: 5201)
 bind_ip: "10.32.123.61"       # Insert your own IP addr. here 
 interface: "wlp2s0"           # Name of interface providing IP addr.
 

@@ -19,6 +19,7 @@ Edit `config.yaml` with your settings:
 
 ```yaml
 server: "your.server.ip"     # iperf3 server
+port: 5201                   # iperf3 server port
 bind_ip: "your.local.ip"     # local interface IP
 interface: "eth0"            # network interface
 duration: 300                # test duration (seconds)
