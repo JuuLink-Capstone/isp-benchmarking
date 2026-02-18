@@ -9,6 +9,7 @@ import sys
 import signal
 import subprocess
 import time
+import argparse
 from datetime import datetime
 from pathlib import Path
 import yaml
@@ -254,15 +255,29 @@ class NetworkTester:
 
 def main():
     """Main entry point."""
-    if len(sys.argv) > 1 and sys.argv[1] == "clean":
-        # Clean mode
-        tester = NetworkTester()
+    parser = argparse.ArgumentParser(
+        description="Network Testing Iterator - TCP/UDP/ICMP benchmark suite"
+    )
+    parser.add_argument(
+        '-c', '--config',
+        default='config.yaml',
+        help='Path to configuration file (default: config.yaml)'
+    )
+    parser.add_argument(
+        '--clean',
+        action='store_true',
+        help='Clean log files and exit'
+    )
+    
+    args = parser.parse_args()
+    
+    tester = NetworkTester(args.config)
+    
+    if args.clean:
         tester.cleanup_logs()
         sys.exit(0)
     
     # Normal execution
-    config_file = sys.argv[1] if len(sys.argv) > 1 else "config.yaml"
-    tester = NetworkTester(config_file)
     tester.run()
 
 
