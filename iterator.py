@@ -235,8 +235,12 @@ class NetworkTester:
         
         self.iter += 1
     
-    def run(self):
-        """Main execution loop."""
+    def run(self, duration_minutes=None):
+        """Main execution loop.
+        
+        Args:
+            duration_minutes: If specified, run for this many minutes then exit gracefully.
+        """
         # Set up signal handlers
         signal.signal(signal.SIGINT, self.cleanup)
         signal.signal(signal.SIGTERM, self.cleanup)
@@ -247,11 +251,24 @@ class NetworkTester:
         # Start background fping
         self.start_fping()
         
+        # Calculate end time if duration specified
+        start_time = time.time()
+        end_time = start_time + (duration_minutes * 60) if duration_minutes else None
+        
         # Main loop
         try:
             while True:
                 self.run_iteration()
+                
+                # Check if we've exceeded duration
+                if end_time and time.time() >= end_time:
+                    print(f"\nReached target duration of {duration_minutes} minutes. Stopping...")
+                    break
         except KeyboardInterrupt:
+            self.cleanup()
+        
+        # Clean shutdown after duration expires
+        if end_time:
             self.cleanup()
 
 
@@ -264,6 +281,12 @@ def main():
         '-c', '--config',
         default='config.yaml',
         help='Path to configuration file (default: config.yaml)'
+    )
+    parser.add_argument(
+        '-d', '--duration',
+        type=int,
+        metavar='MINUTES',
+        help='Run for specified duration in minutes (e.g., -d 360 = 6 hours)'
     )
     parser.add_argument(
         '--clean',
@@ -280,7 +303,7 @@ def main():
         sys.exit(0)
     
     # Normal execution
-    tester.run()
+    tester.run(duration_minutes=args.duration)
 
 
 if __name__ == "__main__":
